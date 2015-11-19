@@ -1,0 +1,5 @@
+ionic-employers:
+   image: ajjenda/ionic-employers:${COPYARTIFACT_BUILD_NUMBER_AJJENDA_EMPLOYEES_MOBILE}
+   expose:
+    - "8100"
+    - "35729"
