@@ -3,14 +3,14 @@ ionic-employers:
    expose:
     - "8100"
     - "35729"
-  restart: always
-  tty: true
-  stdin_open: true
+   restart: always
+   tty: true
+   stdin_open: true
 employers:
-  ports:
-  - 35730:35729
-  - 8101:8100
-  restart: always
-  tty: true
-  image: rancher/load-balancer-service
-  stdin_open: true
+   ports:
+     - 35730:35729
+     - 8101:8100
+   restart: always
+   tty: true
+   image: rancher/load-balancer-service
+   stdin_open: true
