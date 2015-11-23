@@ -6,7 +6,7 @@ RUN phonegap -v && \
     ionic -v && \
     n -V && \
     bower -v && \
-    node -v && \
+    node -v
 
 COPY ajjenda-mobile-employers.tar.gz .
 RUN tar -zxf ajjenda-mobile-employers.tar.gz && rm ajjenda-mobile-employers.tar.gz 
