@@ -1,15 +1,15 @@
 FROM ajjenda/ionic
 MAINTAINER Yoseph Reuveni <yoseph.reuveni@gmail.com>
  
-RUN phonegap -v
-RUN cordova -v
-RUN ionic -v
-RUN n -V
-RUN bower -v
-RUN node -v
+RUN phonegap -v && \
+    cordova -v && \
+    ionic -v && \
+    n -V && \
+    bower -v && \
+    node -v && \
 
-COPY ajjenda-employees-mobile.tar.gz .
-RUN tar -zxf ajjenda-employees-mobile.tar.gz
+COPY ajjenda-mobile-employers.tar.gz .
+RUN tar -zxf ajjenda-mobile-employers.tar.gz && rm ajjenda-mobile-employers.tar.gz 
 
 # Expose the ports we're interested in
 EXPOSE 8100 8100
