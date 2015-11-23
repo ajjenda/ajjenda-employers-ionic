@@ -1,5 +1,16 @@
 ionic-employers:
-   image: ajjenda/ionic-employers:${COPYARTIFACT_BUILD_NUMBER_AJJENDA_EMPLOYEES_MOBILE}
+   image: ajjenda/ionic-employers:latest
    expose:
     - "8100"
     - "35729"
+  restart: always
+  tty: true
+  stdin_open: true
+employers:
+  ports:
+  - 35730:35729
+  - 8101:8100
+  restart: always
+  tty: true
+  image: rancher/load-balancer-service
+  stdin_open: true
