@@ -8,9 +8,11 @@ ionic-employers:
    stdin_open: true
 employers:
    ports:
-     - 35730:35729
-     - 8101:8100
+    - 35730:35729
+    - 8101:8100
    restart: always
    tty: true
    image: rancher/load-balancer-service
    stdin_open: true
+   links:
+    - ionic-employers:ionic-employers  
